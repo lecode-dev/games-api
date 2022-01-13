@@ -3,11 +3,13 @@ module.exports = {
   // https://tailwindcss.com/docs/just-in-time-mode
   // mode: "jit",
   theme: {
-    colors: {
-      'purple': '#4B3869',
-      'light-purple': '#664E88',
-      'aqua': '#63B4B8',
-      'light-aqua': '#A9E4D7',
+    extend: {
+      colors: {
+        'purple': '#4B3869',
+        'light-purple': '#664E88',
+        'aqua': '#63B4B8',
+        'light-aqua': '#A9E4D7',
+      },
     },
   },
   variants: {},
