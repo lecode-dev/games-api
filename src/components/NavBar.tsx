@@ -7,10 +7,9 @@ import DittoImg from "../assets/ditto.png"
 
 
 const navigation = [
-  { name: 'Dashboard', href: '#', current: true },
-  { name: 'Team', href: '#', current: false },
-  { name: 'Projects', href: '#', current: false },
-  { name: 'Calendar', href: '#', current: false },
+  { name: 'Home', href: '#', current: true },
+  { name: 'About Us', href: '#', current: false },
+  { name: 'Search', href: '#', current: false },
 ]
 
 function classNames(...classes:any) {
