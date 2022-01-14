@@ -46,6 +46,9 @@ export default function NavBar() {
                     src={DittoImg}
                     alt="Ditto Icon"
                   />
+                  <h1 className='px-3 py-2 rounded-md text-sm font-medium text-white'>
+                    TGDB
+                  </h1>
                 </div>
                 <div className="hidden sm:block sm:ml-6">
                   <div className="flex space-x-4">
@@ -55,7 +58,7 @@ export default function NavBar() {
                         href={item.href}
                         className={classNames(
                           item.current ? 'bg-light-purple text-white' : 'text-gray-300 hover:bg-light-purple hover:text-white',
-                          'px-3 py-2 rounded-md text-sm font-medium'
+                          'px-4 py-2 rounded-md text-sm font-medium'
                         )}
                         aria-current={item.current ? 'page' : undefined}
                       >
