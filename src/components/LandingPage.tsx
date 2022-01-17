@@ -34,6 +34,8 @@ import {
 } from '@heroicons/react/outline'
 import { ChevronDownIcon } from '@heroicons/react/solid'
 
+import DittoImg from "../assets/ditto.png"
+
 const solutions = [
   {
     name: 'Inbox',
@@ -199,189 +201,12 @@ function classNames(...classes:any) {
 
 export default function LandingPage() {
   return (
-    <div className="bg-light-purple">
-      <header>
-        <Popover className="relative bg-light-purple">
-          <div className="flex justify-between items-center max-w-7xl mx-auto px-4 py-6 sm:px-6 md:justify-start md:space-x-10 lg:px-8">
-            <div className="flex justify-start lg:w-0 lg:flex-1">
-              <a href="#">
-                <span className="sr-only">Workflow</span>
-                <img
-                  className="h-8 w-auto sm:h-10"
-                  src="https://tailwindui.com/img/logos/workflow-mark-purple-600-to-indigo-600.svg"
-                  alt=""
-                />
-              </a>
-            </div>
-            <div className="-mr-2 -my-2 md:hidden">
-              <Popover.Button className="bg-light-purple rounded-md p-2 inline-flex items-center justify-center text-white hover:text-gray-400 hover:bg-purple focus:outline-none focus:ring-2 focus:ring-inset focus:ring-light-aqua">
-                <span className="sr-only">Open menu</span>
-                <MenuIcon className="h-6 w-6" aria-hidden="true" />
-              </Popover.Button>
-            </div>
-            <Popover.Group as="nav" className="hidden md:flex space-x-10">
-              <Popover className="relative">
-                {({ open }) => (
-                  <>
-                    <Popover.Button
-                      className={classNames(
-                        open ? 'text-gray-900' : 'text-white',
-                        'group bg-light-purple rounded-md inline-flex items-center text-base font-medium hover:text-gray-900'
-                      )}
-                    >
-                      <span>Solutions</span>
-                      <ChevronDownIcon
-                        className={classNames(
-                          open ? 'text-gray-900' : 'text-white',
-                          'ml-2 h-5 w-5 group-hover:text-gray-800'
-                        )}
-                        aria-hidden="true"
-                      />
-                    </Popover.Button>
-
-                    <Transition
-                      as={Fragment}
-                      enter="transition ease-out duration-200"
-                      enterFrom="opacity-0 translate-y-1"
-                      enterTo="opacity-100 translate-y-0"
-                      leave="transition ease-in duration-150"
-                      leaveFrom="opacity-100 translate-y-0"
-                      leaveTo="opacity-0 translate-y-1"
-                    >
-                      <Popover.Panel className="absolute z-10 -ml-4 mt-3 transform w-screen max-w-md lg:max-w-2xl lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
-                        <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                          <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
-                            {solutions.map((item) => (
-                              <a
-                                key={item.name}
-                                href={item.href}
-                                className="-m-3 p-3 flex items-start rounded-lg hover:bg-light-aqua"
-                              >
-                                <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-purple-600 to-light-aqua text-white sm:h-12 sm:w-12">
-                                  <item.icon className="h-6 w-6" aria-hidden="true" />
-                                </div>
-                                <div className="ml-4">
-                                  <p className="text-base font-medium text-aqua">{item.name}</p>
-                                  <p className="mt-1 text-sm text-gray-500">{item.description}</p>
-                                </div>
-                              </a>
-                            ))}
-                          </div>
-                        </div>
-                      </Popover.Panel>
-                    </Transition>
-                  </>
-                )}
-              </Popover>
-
-              <a href="#" className="text-base font-medium text-white hover:text-gray-900">
-                Pricing
-              </a>
-              <a href="#" className="text-base font-medium text-white hover:text-gray-900">
-                Partners
-              </a>
-              <a href="#" className="text-base font-medium text-white hover:text-gray-900">
-                Company
-              </a>
-            </Popover.Group>
-            <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-              <a href="#" className="whitespace-nowrap text-base font-medium text-white hover:text-gray-900">
-                Sign in
-              </a>
-              <a
-                href="#"
-                className="ml-8 whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white hover:from-purple-700 hover:to-indigo-700"
-              >
-                Sign up
-              </a>
-            </div>
-          </div>
-
-          <Transition
-            as={Fragment}
-            enter="duration-200 ease-out"
-            enterFrom="opacity-0 scale-95"
-            enterTo="opacity-100 scale-100"
-            leave="duration-100 ease-in"
-            leaveFrom="opacity-100 scale-100"
-            leaveTo="opacity-0 scale-95"
-          >
-            <Popover.Panel
-              focus
-              className="absolute z-30 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
-            >
-              <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
-                <div className="pt-5 pb-6 px-5">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <img
-                        className="h-8 w-auto"
-                        src="https://tailwindui.com/img/logos/workflow-mark-purple-600-to-indigo-600.svg"
-                        alt="Workflow"
-                      />
-                    </div>
-                    <div className="-mr-2">
-                      <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
-                        <span className="sr-only">Close menu</span>
-                        <XIcon className="h-6 w-6" aria-hidden="true" />
-                      </Popover.Button>
-                    </div>
-                  </div>
-                  <div className="mt-6">
-                    <nav className="grid grid-cols-1 gap-7">
-                      {solutions.map((item) => (
-                        <a
-                          key={item.name}
-                          href={item.href}
-                          className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
-                        >
-                          <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
-                            <item.icon className="h-6 w-6" aria-hidden="true" />
-                          </div>
-                          <div className="ml-4 text-base font-medium text-gray-900">{item.name}</div>
-                        </a>
-                      ))}
-                    </nav>
-                  </div>
-                </div>
-                <div className="py-6 px-5">
-                  <div className="grid grid-cols-2 gap-4">
-                    <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
-                      Pricing
-                    </a>
-                    <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
-                      Partners
-                    </a>
-                    <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
-                      Company
-                    </a>
-                  </div>
-                  <div className="mt-6">
-                    <a
-                      href="#"
-                      className="w-full flex items-center justify-center bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-black hover:from-purple-700 hover:to-indigo-700"
-                    >
-                      Sign up
-                    </a>
-                    <p className="mt-6 text-center text-base font-medium text-gray-500">
-                      Existing customer? 
-                      <a href="#" className="text-gray-900">
-                        Sign in
-                      </a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </Popover.Panel>
-          </Transition>
-        </Popover>
-      </header>
-
+    <div className="bg-white">
       <main>
         {/* Hero section */}
         <div className="relative">
-          <div className="absolute inset-x-0 bottom-0 h-1/2 bg-light-purple" />
-          <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
+          <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-r from-aqua to-light-purple text-transparent" />
+          <div className="max-w-7xl sm:pt-6 pb-16 mx-auto sm:px-6 lg:px-8">
             <div className="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
               <div className="absolute inset-0">
                 <img
@@ -392,11 +217,11 @@ export default function LandingPage() {
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-800 to-indigo-700 mix-blend-multiply" />
               </div>
               <div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
-                <h1 className="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+                <h1 className="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl ">
                   <span className="block text-white">Take control of your</span>
                   <span className="block text-aqua">customer support</span>
                 </h1>
-                <p className="mt-6 max-w-lg mx-auto text-center text-xl text-light-aqua sm:max-w-3xl">
+                <p className="mt-6 max-w-lg mx-auto text-center text-xl text-white sm:max-w-3xl">
                   Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt
                   amet fugiat veniam occaecat fugiat aliqua.
                 </p>
@@ -404,7 +229,7 @@ export default function LandingPage() {
                   <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
                     <a
                       href="#"
-                      className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-aqua bg-white hover:bg-gray-200 sm:px-8"
+                      className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-purple bg-white hover:bg-gray-200 sm:px-8"
                     >
                       Get started
                     </a>
@@ -422,9 +247,9 @@ export default function LandingPage() {
         </div>
 
         {/* Logo Cloud */}
-        <div className="bg-light-purple">
+        <div className="bg-white">
           <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-            <p className="text-center text-sm font-semibold uppercase text-white tracking-wide">
+            <p className="text-center text-sm font-semibold uppercase text-purple tracking-wide">
               Trusted by over 5 very average small businesses
             </p>
             <div className="mt-6 grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
@@ -461,21 +286,21 @@ export default function LandingPage() {
 
         {/* Alternating Feature Sections */}
         <div className="relative pt-16 pb-32 overflow-hidden">
-          <div aria-hidden="true" className="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-light-purple" />
+          <div aria-hidden="true" className="absolute inset-x-0 top-0 h-48 bg-gradient-to-b bg-white" />
           <div className="relative">
             <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
               <div className="px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
                 <div>
                   <div>
                     <span className="h-12 w-12 rounded-md flex items-center justify-center bg-gradient-to-r from-purple-600 to-indigo-600">
-                      <InboxIcon className="h-6 w-6 text-white" aria-hidden="true" />
+                      <InboxIcon className="h-6 w-6 text-purple" aria-hidden="true" />
                     </span>
                   </div>
                   <div className="mt-6">
-                    <h2 className="text-3xl font-extrabold tracking-tight text-aqua">
+                    <h2 className="text-3xl font-extrabold tracking-tight text-purple">
                       Stay on top of customer support
                     </h2>
-                    <p className="mt-4 text-lg text-white">
+                    <p className="mt-4 text-lg text-light-purple">
                       Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia
                       porttitor. Pulvinar laoreet sagittis viverra duis. In venenatis sem arcu pretium pharetra at.
                       Lectus viverra dui tellus ornare pharetra.
@@ -483,17 +308,17 @@ export default function LandingPage() {
                     <div className="mt-6">
                       <a
                         href="#"
-                        className="inline-flex bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-purple-700 hover:to-indigo-700"
+                        className="inline-flex bg-white bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-purple hover:bg-gray-200"
                       >
                         Get started
                       </a>
                     </div>
                   </div>
                 </div>
-                <div className="mt-8 border-t border-gray-200 pt-6">
+                <div className="mt-8 border-t border-purple pt-6">
                   <blockquote>
                     <div>
-                      <p className="text-base text-light-aqua">
+                      <p className="text-base text-light-purple">
                         &ldquo;Cras velit quis eros eget rhoncus lacus ultrices sed diam. Sit orci risus aenean
                         curabitur donec aliquet. Mi venenatis in euismod ut.&rdquo;
                       </p>
@@ -507,7 +332,7 @@ export default function LandingPage() {
                             alt=""
                           />
                         </div>
-                        <div className="text-base font-medium text-white">
+                        <div className="text-base font-medium text-purple">
                           Marcia Hill, Digital Marketing Manager
                         </div>
                       </div>
@@ -532,14 +357,14 @@ export default function LandingPage() {
                 <div>
                   <div>
                     <span className="h-12 w-12 rounded-md flex items-center justify-center bg-gradient-to-r from-purple-600 to-indigo-600">
-                      <SparklesIcon className="h-6 w-6 text-white" aria-hidden="true" />
+                      <SparklesIcon className="h-6 w-6 text-purple" aria-hidden="true" />
                     </span>
                   </div>
                   <div className="mt-6">
-                    <h2 className="text-3xl font-extrabold tracking-tight text-aqua">
+                    <h2 className="text-3xl font-extrabold tracking-tight text-purple">
                       Better understand your customers
                     </h2>
-                    <p className="mt-4 text-lg text-white">
+                    <p className="mt-4 text-lg text-light-purple">
                       Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia
                       porttitor. Pulvinar laoreet sagittis viverra duis. In venenatis sem arcu pretium pharetra at.
                       Lectus viverra dui tellus ornare pharetra.
@@ -547,7 +372,7 @@ export default function LandingPage() {
                     <div className="mt-6">
                       <a
                         href="#"
-                        className="inline-flex bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-purple-700 hover:to-indigo-700"
+                        className="inline-flex bg-white bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-purple hover:bg-gray-200"
                       >
                         Get started
                       </a>
@@ -571,8 +396,8 @@ export default function LandingPage() {
         {/* Gradient Feature Section */}
         <div className="bg-gradient-to-r from-purple-800 to-indigo-700">
           <div className="max-w-4xl mx-auto px-4 py-16 sm:px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:pt-24 lg:px-8">
-            <h2 className="text-3xl font-extrabold text-aqua tracking-tight">Inbox support built for efficiency</h2>
-            <p className="mt-4 max-w-3xl text-lg text-white">
+            <h2 className="text-3xl font-extrabold text-purple tracking-tight">Inbox support built for efficiency</h2>
+            <p className="mt-4 max-w-3xl text-lg text-light-purple">
               Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis. Blandit
               aliquam sit nisl euismod mattis in.
             </p>
@@ -580,13 +405,13 @@ export default function LandingPage() {
               {features.map((feature) => (
                 <div key={feature.name}>
                   <div>
-                    <span className="flex items-center justify-center h-12 w-12 rounded-md bg-purple bg-opacity-40">
-                      <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
+                    <span className="flex items-center justify-center h-12 w-12 rounded-md bg-light-purple bg-opacity-20">
+                      <feature.icon className="h-6 w-6 text-light-purple" aria-hidden="true" />
                     </span>
                   </div>
                   <div className="mt-6">
-                    <h3 className="text-lg font-medium text-white">{feature.name}</h3>
-                    <p className="mt-2 text-base text-purple-200">{feature.description}</p>
+                    <h3 className="text-lg font-medium text-purple">{feature.name}</h3>
+                    <p className="mt-2 text-base text-light-purple">{feature.description}</p>
                   </div>
                 </div>
               ))}
@@ -595,7 +420,7 @@ export default function LandingPage() {
         </div>
 
         {/* Stats section */}
-        <div className="relative bg-gray-900">
+        <div className="relative bg-purple">
           <div className="h-80 absolute inset-x-0 bottom-0 xl:top-0 xl:h-full">
             <div className="h-full w-full xl:grid xl:grid-cols-2">
               <div className="h-full xl:relative xl:col-start-2">
@@ -606,7 +431,7 @@ export default function LandingPage() {
                 />
                 <div
                   aria-hidden="true"
-                  className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-gray-900 xl:inset-y-0 xl:left-0 xl:h-full xl:w-32 xl:bg-gradient-to-r"
+                  className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-purple xl:inset-y-0 xl:left-0 xl:h-full xl:w-32 xl:bg-gradient-to-r"
                 />
               </div>
             </div>
@@ -618,10 +443,10 @@ export default function LandingPage() {
                   Valuable Metrics
                 </span>
               </h2>
-              <p className="mt-3 text-3xl font-extrabold text-white">
+              <p className="mt-3 text-3xl font-extrabold bg-gradient-to-r text-white">
                 Get actionable data that will help grow your business
               </p>
-              <p className="mt-5 text-lg text-gray-300">
+              <p className="mt-5 text-lg text-white">
                 Rhoncus sagittis risus arcu erat lectus bibendum. Ut in adipiscing quis in viverra tristique sem. Ornare
                 feugiat viverra eleifend fusce orci in quis amet. Sit in et vitae tortor, massa. Dapibus laoreet amet
                 lacus nibh integer quis. Eu vulputate diam sit tellus quis at.
@@ -629,7 +454,7 @@ export default function LandingPage() {
               <div className="mt-12 grid grid-cols-1 gap-y-12 gap-x-6 sm:grid-cols-2">
                 {metrics.map((item) => (
                   <p key={item.id}>
-                    <span className="block text-2xl font-bold text-white">{item.stat}</span>
+                    <span className="block text-2xl font-bold text-aqua">{item.stat}</span>
                     <span className="mt-1 block text-base text-gray-300">
                       <span className="font-medium text-white">{item.emphasis}</span> {item.rest}
                     </span>
@@ -643,22 +468,22 @@ export default function LandingPage() {
         {/* CTA Section */}
         <div className="bg-white">
           <div className="max-w-4xl mx-auto py-16 px-4 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8 lg:flex lg:items-center lg:justify-between">
-            <h2 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+            <h2 className="text-4xl font-extrabold tracking-tight text-purple sm:text-4xl">
               <span className="block">Ready to get started?</span>
-              <span className="block bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-aqua to-light-purple bg-clip-text text-transparent">
                 Get in touch or create an account.
               </span>
             </h2>
             <div className="mt-6 space-y-4 sm:space-y-0 sm:flex sm:space-x-5">
               <a
                 href="#"
-                className="flex items-center justify-center bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-purple-700 hover:to-indigo-700"
+                className="flex items-center justify-center bg-white px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-purple hover:bg-gray-200"
               >
                 Learn more
               </a>
               <a
                 href="#"
-                className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-800 bg-indigo-50 hover:bg-indigo-100"
+                className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-purple bg-white hover:bg-gray-200"
               >
                 Get started
               </a>
@@ -666,113 +491,6 @@ export default function LandingPage() {
           </div>
         </div>
       </main>
-
-      <footer className="bg-gray-50" aria-labelledby="footer-heading">
-        <h2 id="footer-heading" className="sr-only">
-          Footer
-        </h2>
-        <div className="max-w-7xl mx-auto pt-16 pb-8 px-4 sm:px-6 lg:pt-24 lg:px-8">
-          <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-            <div className="grid grid-cols-2 gap-8 xl:col-span-2">
-              <div className="md:grid md:grid-cols-2 md:gap-8">
-                <div>
-                  <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Solutions</h3>
-                  <ul role="list" className="mt-4 space-y-4">
-                    {footerNavigation.solutions.map((item) => (
-                      <li key={item.name}>
-                        <a href={item.href} className="text-base text-gray-500 hover:text-gray-900">
-                          {item.name}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="mt-12 md:mt-0">
-                  <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Support</h3>
-                  <ul role="list" className="mt-4 space-y-4">
-                    {footerNavigation.support.map((item) => (
-                      <li key={item.name}>
-                        <a href={item.href} className="text-base text-gray-500 hover:text-gray-900">
-                          {item.name}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-              <div className="md:grid md:grid-cols-2 md:gap-8">
-                <div>
-                  <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Company</h3>
-                  <ul role="list" className="mt-4 space-y-4">
-                    {footerNavigation.company.map((item) => (
-                      <li key={item.name}>
-                        <a href={item.href} className="text-base text-gray-500 hover:text-gray-900">
-                          {item.name}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="mt-12 md:mt-0">
-                  <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Legal</h3>
-                  <ul role="list" className="mt-4 space-y-4">
-                    {footerNavigation.legal.map((item) => (
-                      <li key={item.name}>
-                        <a href={item.href} className="text-base text-gray-500 hover:text-gray-900">
-                          {item.name}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div className="mt-12 xl:mt-0">
-              <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                Subscribe to our newsletter
-              </h3>
-              <p className="mt-4 text-base text-gray-500">
-                The latest news, articles, and resources, sent to your inbox weekly.
-              </p>
-              <form className="mt-4 sm:flex sm:max-w-md">
-                <label htmlFor="email-address" className="sr-only">
-                  Email address
-                </label>
-                <input
-                  type="email"
-                  name="email-address"
-                  id="email-address"
-                  autoComplete="email"
-                  required
-                  className="appearance-none min-w-0 w-full bg-white border border-gray-300 rounded-md shadow-sm py-2 px-4 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:placeholder-gray-400"
-                  placeholder="Enter your email"
-                />
-                <div className="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
-                  <button
-                    type="submit"
-                    className="w-full flex items-center justify-center bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-purple-700 hover:to-indigo-700"
-                  >
-                    Subscribe
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
-          <div className="mt-12 border-t border-gray-200 pt-8 md:flex md:items-center md:justify-between lg:mt-16">
-            <div className="flex space-x-6 md:order-2">
-              {footerNavigation.social.map((item) => (
-                <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-500">
-                  <span className="sr-only">{item.name}</span>
-                  <item.icon className="h-6 w-6" aria-hidden="true" />
-                </a>
-              ))}
-            </div>
-            <p className="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
-              &copy; 2020 Workflow, Inc. All rights reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
     </div>
   )
 }
