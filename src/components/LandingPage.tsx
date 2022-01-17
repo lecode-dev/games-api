@@ -199,9 +199,9 @@ function classNames(...classes:any) {
 
 export default function LandingPage() {
   return (
-    <div className="bg-white">
+    <div className="bg-light-purple">
       <header>
-        <Popover className="relative bg-white">
+        <Popover className="relative bg-light-purple">
           <div className="flex justify-between items-center max-w-7xl mx-auto px-4 py-6 sm:px-6 md:justify-start md:space-x-10 lg:px-8">
             <div className="flex justify-start lg:w-0 lg:flex-1">
               <a href="#">
@@ -214,7 +214,7 @@ export default function LandingPage() {
               </a>
             </div>
             <div className="-mr-2 -my-2 md:hidden">
-              <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+              <Popover.Button className="bg-light-purple rounded-md p-2 inline-flex items-center justify-center text-white hover:text-gray-400 hover:bg-purple focus:outline-none focus:ring-2 focus:ring-inset focus:ring-light-aqua">
                 <span className="sr-only">Open menu</span>
                 <MenuIcon className="h-6 w-6" aria-hidden="true" />
               </Popover.Button>
@@ -225,15 +225,15 @@ export default function LandingPage() {
                   <>
                     <Popover.Button
                       className={classNames(
-                        open ? 'text-gray-900' : 'text-gray-500',
-                        'group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+                        open ? 'text-gray-900' : 'text-white',
+                        'group bg-light-purple rounded-md inline-flex items-center text-base font-medium hover:text-gray-900'
                       )}
                     >
                       <span>Solutions</span>
                       <ChevronDownIcon
                         className={classNames(
-                          open ? 'text-gray-600' : 'text-gray-400',
-                          'ml-2 h-5 w-5 group-hover:text-gray-500'
+                          open ? 'text-gray-900' : 'text-white',
+                          'ml-2 h-5 w-5 group-hover:text-gray-800'
                         )}
                         aria-hidden="true"
                       />
@@ -255,13 +255,13 @@ export default function LandingPage() {
                               <a
                                 key={item.name}
                                 href={item.href}
-                                className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
+                                className="-m-3 p-3 flex items-start rounded-lg hover:bg-light-aqua"
                               >
-                                <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-purple-600 to-indigo-600 text-white sm:h-12 sm:w-12">
+                                <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-purple-600 to-light-aqua text-white sm:h-12 sm:w-12">
                                   <item.icon className="h-6 w-6" aria-hidden="true" />
                                 </div>
                                 <div className="ml-4">
-                                  <p className="text-base font-medium text-gray-900">{item.name}</p>
+                                  <p className="text-base font-medium text-aqua">{item.name}</p>
                                   <p className="mt-1 text-sm text-gray-500">{item.description}</p>
                                 </div>
                               </a>
@@ -274,18 +274,18 @@ export default function LandingPage() {
                 )}
               </Popover>
 
-              <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
+              <a href="#" className="text-base font-medium text-white hover:text-gray-900">
                 Pricing
               </a>
-              <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
+              <a href="#" className="text-base font-medium text-white hover:text-gray-900">
                 Partners
               </a>
-              <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
+              <a href="#" className="text-base font-medium text-white hover:text-gray-900">
                 Company
               </a>
             </Popover.Group>
             <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-              <a href="#" className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
+              <a href="#" className="whitespace-nowrap text-base font-medium text-white hover:text-gray-900">
                 Sign in
               </a>
               <a
@@ -359,12 +359,12 @@ export default function LandingPage() {
                   <div className="mt-6">
                     <a
                       href="#"
-                      className="w-full flex items-center justify-center bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white hover:from-purple-700 hover:to-indigo-700"
+                      className="w-full flex items-center justify-center bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-black hover:from-purple-700 hover:to-indigo-700"
                     >
                       Sign up
                     </a>
                     <p className="mt-6 text-center text-base font-medium text-gray-500">
-                      Existing customer?
+                      Existing customer? 
                       <a href="#" className="text-gray-900">
                         Sign in
                       </a>
@@ -380,7 +380,7 @@ export default function LandingPage() {
       <main>
         {/* Hero section */}
         <div className="relative">
-          <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gray-100" />
+          <div className="absolute inset-x-0 bottom-0 h-1/2 bg-light-purple" />
           <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div className="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
               <div className="absolute inset-0">
@@ -394,9 +394,9 @@ export default function LandingPage() {
               <div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
                 <h1 className="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
                   <span className="block text-white">Take control of your</span>
-                  <span className="block text-indigo-200">customer support</span>
+                  <span className="block text-aqua">customer support</span>
                 </h1>
-                <p className="mt-6 max-w-lg mx-auto text-center text-xl text-indigo-200 sm:max-w-3xl">
+                <p className="mt-6 max-w-lg mx-auto text-center text-xl text-light-aqua sm:max-w-3xl">
                   Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt
                   amet fugiat veniam occaecat fugiat aliqua.
                 </p>
@@ -404,13 +404,13 @@ export default function LandingPage() {
                   <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
                     <a
                       href="#"
-                      className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-700 bg-white hover:bg-indigo-50 sm:px-8"
+                      className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-aqua bg-white hover:bg-gray-200 sm:px-8"
                     >
                       Get started
                     </a>
                     <a
                       href="#"
-                      className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-500 bg-opacity-60 hover:bg-opacity-70 sm:px-8"
+                      className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-aqua bg-opacity-60 hover:bg-opacity-70 sm:px-8"
                     >
                       Live demo
                     </a>
@@ -422,9 +422,9 @@ export default function LandingPage() {
         </div>
 
         {/* Logo Cloud */}
-        <div className="bg-gray-100">
+        <div className="bg-light-purple">
           <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-            <p className="text-center text-sm font-semibold uppercase text-gray-500 tracking-wide">
+            <p className="text-center text-sm font-semibold uppercase text-white tracking-wide">
               Trusted by over 5 very average small businesses
             </p>
             <div className="mt-6 grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
@@ -461,7 +461,7 @@ export default function LandingPage() {
 
         {/* Alternating Feature Sections */}
         <div className="relative pt-16 pb-32 overflow-hidden">
-          <div aria-hidden="true" className="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-gray-100" />
+          <div aria-hidden="true" className="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-light-purple" />
           <div className="relative">
             <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
               <div className="px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
@@ -472,10 +472,10 @@ export default function LandingPage() {
                     </span>
                   </div>
                   <div className="mt-6">
-                    <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
+                    <h2 className="text-3xl font-extrabold tracking-tight text-aqua">
                       Stay on top of customer support
                     </h2>
-                    <p className="mt-4 text-lg text-gray-500">
+                    <p className="mt-4 text-lg text-white">
                       Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia
                       porttitor. Pulvinar laoreet sagittis viverra duis. In venenatis sem arcu pretium pharetra at.
                       Lectus viverra dui tellus ornare pharetra.
@@ -493,7 +493,7 @@ export default function LandingPage() {
                 <div className="mt-8 border-t border-gray-200 pt-6">
                   <blockquote>
                     <div>
-                      <p className="text-base text-gray-500">
+                      <p className="text-base text-light-aqua">
                         &ldquo;Cras velit quis eros eget rhoncus lacus ultrices sed diam. Sit orci risus aenean
                         curabitur donec aliquet. Mi venenatis in euismod ut.&rdquo;
                       </p>
@@ -507,7 +507,7 @@ export default function LandingPage() {
                             alt=""
                           />
                         </div>
-                        <div className="text-base font-medium text-gray-700">
+                        <div className="text-base font-medium text-white">
                           Marcia Hill, Digital Marketing Manager
                         </div>
                       </div>
@@ -536,10 +536,10 @@ export default function LandingPage() {
                     </span>
                   </div>
                   <div className="mt-6">
-                    <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
+                    <h2 className="text-3xl font-extrabold tracking-tight text-aqua">
                       Better understand your customers
                     </h2>
-                    <p className="mt-4 text-lg text-gray-500">
+                    <p className="mt-4 text-lg text-white">
                       Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia
                       porttitor. Pulvinar laoreet sagittis viverra duis. In venenatis sem arcu pretium pharetra at.
                       Lectus viverra dui tellus ornare pharetra.
@@ -571,8 +571,8 @@ export default function LandingPage() {
         {/* Gradient Feature Section */}
         <div className="bg-gradient-to-r from-purple-800 to-indigo-700">
           <div className="max-w-4xl mx-auto px-4 py-16 sm:px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:pt-24 lg:px-8">
-            <h2 className="text-3xl font-extrabold text-white tracking-tight">Inbox support built for efficiency</h2>
-            <p className="mt-4 max-w-3xl text-lg text-purple-200">
+            <h2 className="text-3xl font-extrabold text-aqua tracking-tight">Inbox support built for efficiency</h2>
+            <p className="mt-4 max-w-3xl text-lg text-white">
               Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis. Blandit
               aliquam sit nisl euismod mattis in.
             </p>
@@ -580,7 +580,7 @@ export default function LandingPage() {
               {features.map((feature) => (
                 <div key={feature.name}>
                   <div>
-                    <span className="flex items-center justify-center h-12 w-12 rounded-md bg-white bg-opacity-10">
+                    <span className="flex items-center justify-center h-12 w-12 rounded-md bg-purple bg-opacity-40">
                       <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
                     </span>
                   </div>
