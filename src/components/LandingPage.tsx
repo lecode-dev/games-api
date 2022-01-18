@@ -35,6 +35,15 @@ import {
 import { ChevronDownIcon } from '@heroicons/react/solid'
 
 import DittoImg from "../assets/ditto.png"
+import HomeImage from "../assets/playstation-titles.jpg"
+import Catalogue from "../assets/game-titles.png"
+import GameData from "../assets/game-data.png"
+import GodOfWar from "../assets/god-of-war-cover.jpg"
+import SantaMonica from "../assets/santa-monica-logo.png"
+import Insomniac from "../assets/insomniac-logo.png"
+import Ubisoft from "../assets/ubisoft-logo.png"
+import BandaiNamco from "../assets/bandai-namco-logo.png"
+import NaughtyDog from "../assets/naughty-dog-logo.png"
 
 const solutions = [
   {
@@ -205,25 +214,26 @@ export default function LandingPage() {
       <main>
         {/* Hero section */}
         <div className="relative">
-          <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-r from-light-purple to-purple text-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-r from-light-aqua to-purple text-transparent" />
           <div className="max-w-7xl sm:pt-6 pb-16 mx-auto sm:px-6 lg:px-8">
             <div className="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
               <div className="absolute inset-0">
                 <img
                   className="h-full w-full object-cover"
-                  src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2830&q=80&sat=-100"
-                  alt="People working on laptops"
+                  src={HomeImage}
+                  alt="Playstation Titles"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-800 to-indigo-700 mix-blend-multiply" />
               </div>
               <div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
                 <h1 className="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl ">
                   <span className="block text-white">Take control of your</span>
-                  <span className="block text-purple">customer support</span>
+                  <span className="block text-light-aqua">gamer experience</span>
                 </h1>
                 <p className="mt-6 max-w-lg mx-auto text-center text-xl text-white sm:max-w-3xl">
-                  Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt
-                  amet fugiat veniam occaecat fugiat aliqua.
+                  All that you need to consume your gamer desire, let it out your true gamer personality!
+                  <p>"To be a gamer... To be a player [...]" ~ Zangado</p> 
+
                 </p>
                 <div className="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
                   <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
@@ -235,9 +245,9 @@ export default function LandingPage() {
                     </a>
                     <a
                       href="#"
-                      className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-purple bg-opacity-60 hover:bg-opacity-70 sm:px-8"
+                      className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-aqua bg-opacity-60 hover:bg-opacity-70 sm:px-8"
                     >
-                      Live demo
+                      Go searching
                     </a>
                   </div>
                 </div>
@@ -250,35 +260,23 @@ export default function LandingPage() {
         <div className="bg-white">
           <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
             <p className="text-center text-sm font-semibold uppercase text-purple tracking-wide">
-              Trusted by over 5 very average small businesses
+              Get to know every game from your favorite game studio developer!
             </p>
             <div className="mt-6 grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
-              <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                <img className="h-12" src="https://tailwindui.com/img/logos/tuple-logo-gray-400.svg" alt="Tuple" />
+              <div className="col-span-1 flex justify-center pt-1 md:col-span-2 lg:col-span-1">
+                <img className="h-14" src={SantaMonica} alt="Santa Monica Studio Icon" />
               </div>
               <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                <img className="h-12" src="https://tailwindui.com/img/logos/mirage-logo-gray-400.svg" alt="Mirage" />
+                <img className="h-16" src={Ubisoft} alt="Ubisoft Icon" />
               </div>
-              <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                <img
-                  className="h-12"
-                  src="https://tailwindui.com/img/logos/statickit-logo-gray-400.svg"
-                  alt="StaticKit"
-                />
+              <div className="col-span-1 flex justify-center pt-2 md:col-span-2 lg:col-span-1">
+                <img className="h-12" src={BandaiNamco} alt="Bandai Namco Icon" />
               </div>
-              <div className="col-span-1 flex justify-center md:col-span-2 md:col-start-2 lg:col-span-1">
-                <img
-                  className="h-12"
-                  src="https://tailwindui.com/img/logos/transistor-logo-gray-400.svg"
-                  alt="Transistor"
-                />
+              <div className="col-span-1 flex justify-center md:col-span-3 lg:col-span-1">
+                <img className="h-16" src={Insomniac} alt="Insomniac Icon" />
               </div>
-              <div className="col-span-2 flex justify-center md:col-span-2 md:col-start-4 lg:col-span-1">
-                <img
-                  className="h-12"
-                  src="https://tailwindui.com/img/logos/workcation-logo-gray-400.svg"
-                  alt="Workcation"
-                />
+              <div className="col-span-2 flex justify-center pt-1 md:col-span-3 lg:col-span-1">
+                <img className="h-14" src={NaughtyDog} alt="Naughty Dog Inc. Icon"/>
               </div>
             </div>
           </div>
@@ -298,12 +296,12 @@ export default function LandingPage() {
                   </div>
                   <div className="mt-6">
                     <h2 className="text-3xl font-extrabold tracking-tight text-purple">
-                      Stay on top of customer support
+                      Stay on top of the great titles
                     </h2>
                     <p className="mt-4 text-lg text-light-purple">
-                      Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia
-                      porttitor. Pulvinar laoreet sagittis viverra duis. In venenatis sem arcu pretium pharetra at.
-                      Lectus viverra dui tellus ornare pharetra.
+                      Stop being surprised when a great title is finally released or ends up being ported to a specific
+                      platform. Stay on top with their current release dates, community rating, which one is its game studio
+                      or even for what platforms one game will be released. You can get all of this here!
                     </p>
                     <div className="mt-6">
                       <a
@@ -315,25 +313,27 @@ export default function LandingPage() {
                     </div>
                   </div>
                 </div>
-                <div className="mt-8 border-t border-purple pt-6">
+                <div className="mt-8 border-t border-aqua pt-6">
                   <blockquote>
                     <div>
-                      <p className="text-base text-light-purple">
-                        &ldquo;Cras velit quis eros eget rhoncus lacus ultrices sed diam. Sit orci risus aenean
-                        curabitur donec aliquet. Mi venenatis in euismod ut.&rdquo;
+                      <p className="text-base font-medium text-light-purple">
+                        God of War (2018), Santa Monica Studio <p>Winner of the Game of The Year award in 2018</p>
                       </p>
                     </div>
                     <footer className="mt-3">
                       <div className="flex items-center space-x-3">
                         <div className="flex-shrink-0">
                           <img
-                            className="h-6 w-6 rounded-full"
-                            src="https://images.unsplash.com/photo-1509783236416-c9ad59bae472?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
+                            className="h-40 w-40 rounded-xl"
+                            src={GodOfWar}
                             alt=""
                           />
                         </div>
-                        <div className="text-base font-medium text-purple">
-                          Marcia Hill, Digital Marketing Manager
+                        <div className="text-base text-purple">
+                          &ldquo;It is a new beginning for Kratos. Living as a man, outside the shadow of the gods, he
+                          seeks solitude in the unfamiliar lands of Norse mythology. With new purpose and his son at his
+                          side, Kratos must fight for survival as powerful forces threaten to disrupt the new life he
+                          has created...&rdquo;
                         </div>
                       </div>
                     </footer>
@@ -344,8 +344,8 @@ export default function LandingPage() {
                 <div className="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
                   <img
                     className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-                    src="https://tailwindui.com/img/component-images/inbox-app-screenshot-1.jpg"
-                    alt="Inbox user interface"
+                    src={Catalogue}
+                    alt="Games Catalogue"
                   />
                 </div>
               </div>
@@ -384,8 +384,8 @@ export default function LandingPage() {
                 <div className="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
                   <img
                     className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
-                    src="https://tailwindui.com/img/component-images/inbox-app-screenshot-2.jpg"
-                    alt="Customer profile user interface"
+                    src={GameData}
+                    alt="Games API Data"
                   />
                 </div>
               </div>
