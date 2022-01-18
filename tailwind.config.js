@@ -10,6 +10,9 @@ module.exports = {
         'aqua': '#63B4B8',
         'light-aqua': '#A9E4D7',
       },
+      fontFamily: {
+        'poppins': ['poppins', 'sans-serif'],
+      },
     },
   },
   variants: {},
