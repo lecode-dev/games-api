@@ -21,6 +21,11 @@ export default function NavBar() {
     <Disclosure as="nav" className="bg-purple">
       {({ open }) => (
         <>
+          <header>
+            <style>
+              @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+            </style>
+          </header>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
             <div className="relative flex items-center justify-between h-16">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -46,8 +51,8 @@ export default function NavBar() {
                     src={DittoImg}
                     alt="Ditto Icon"
                   />
-                  <h1 className='px-3 py-2 rounded-md text-sm font-medium text-white'>
-                    TGDB
+                  <h1 className='px-3 py-2 rounded-md text-base font-medium text-white font-poppins'>
+                    The Game Database
                   </h1>
                 </div>
                 <div className="hidden sm:block sm:ml-6">
