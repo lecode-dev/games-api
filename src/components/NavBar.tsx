@@ -51,7 +51,7 @@ export default function NavBar() {
                     src={DittoImg}
                     alt="Ditto Icon"
                   />
-                  <h1 className='px-3 py-2 rounded-md text-base font-medium text-white font-poppins'>
+                  <h1 className='px-2 py-0 rounded-md text-lg font-medium text-white font-poppins'>
                     The Game Database
                   </h1>
                 </div>
