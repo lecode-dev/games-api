@@ -35,7 +35,7 @@ import {
 import { ChevronDownIcon } from '@heroicons/react/solid'
 
 import DittoImg from "../assets/ditto.png"
-import HomeImage from "../assets/playstation-titles.jpg"
+import HomeImage from "../assets/playstation-titles.png"
 import Catalogue from "../assets/game-titles.png"
 import GameData from "../assets/game-data.png"
 import GodOfWar from "../assets/god-of-war-cover.jpg"
@@ -210,12 +210,12 @@ function classNames(...classes:any) {
 
 export default function LandingPage() {
   return (
-    <div className="bg-white">
+    <div className="bg-dark">
       <main>
         {/* Hero section */}
         <div className="relative">
-          <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-r from-light-aqua to-purple text-transparent" />
-          <div className="max-w-7xl sm:pt-6 pb-16 mx-auto sm:px-6 lg:px-8">
+          <div className="absolute inset-x-0 bottom-0 h-1/2 bg-dark" />
+          <div className="max-w-7xl sm:pt-8 pb-8 mx-auto sm:px-6 lg:px-8">
             <div className="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
               <div className="absolute inset-0">
                 <img
@@ -239,13 +239,13 @@ export default function LandingPage() {
                   <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
                     <a
                       href="#"
-                      className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-purple bg-white hover:bg-gray-200 sm:px-8"
+                      className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-purple bg-white bg-opacity-80 hover:bg-opacity-90 sm:px-8"
                     >
                       Get started
                     </a>
                     <a
                       href="#"
-                      className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-aqua bg-opacity-60 hover:bg-opacity-70 sm:px-8"
+                      className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-purple bg-light-aqua bg-opacity-80 hover:bg-opacity-90 sm:px-8"
                     >
                       Go searching
                     </a>
@@ -257,7 +257,7 @@ export default function LandingPage() {
         </div>
 
         {/* Logo Cloud */}
-        <div className="bg-white">
+        <div className="bg-light-aqua bg-gradient-to-r from-light-aqua to-purple">
           <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
             <p className="text-center text-sm font-semibold uppercase text-purple tracking-wide">
               Get to know every game from your favorite game studio developer!
@@ -273,10 +273,10 @@ export default function LandingPage() {
                 <img className="h-12" src={BandaiNamco} alt="Bandai Namco Icon" />
               </div>
               <div className="col-span-1 flex justify-center md:col-span-3 lg:col-span-1">
-                <img className="h-16" src={Insomniac} alt="Insomniac Icon" />
+                <img className="h-14" src={NaughtyDog} alt="Naughty Dog Inc. Icon"/>
               </div>
               <div className="col-span-2 flex justify-center pt-1 md:col-span-3 lg:col-span-1">
-                <img className="h-14" src={NaughtyDog} alt="Naughty Dog Inc. Icon"/>
+                <img className="h-16" src={Insomniac} alt="Insomniac Icon" />
               </div>
             </div>
           </div>
@@ -284,21 +284,21 @@ export default function LandingPage() {
 
         {/* Alternating Feature Sections */}
         <div className="relative pt-16 pb-32 overflow-hidden">
-          <div aria-hidden="true" className="absolute inset-x-0 top-0 h-48 bg-gradient-to-b bg-white" />
+          <div aria-hidden="true" className="absolute inset-x-0 top-0 h-48 bg-gradient-to-b bg-dark" />
           <div className="relative">
             <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
               <div className="px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
                 <div>
                   <div>
                     <span className="h-12 w-12 rounded-md flex items-center justify-center bg-gradient-to-r from-purple-600 to-indigo-600">
-                      <InboxIcon className="h-6 w-6 text-purple" aria-hidden="true" />
+                      <InboxIcon className="h-6 w-6 text-light-purple" aria-hidden="true" />
                     </span>
                   </div>
                   <div className="mt-6">
-                    <h2 className="text-3xl font-extrabold tracking-tight text-purple">
+                    <h2 className="text-3xl font-extrabold tracking-tight text-white">
                       Stay on top of the great titles
                     </h2>
-                    <p className="mt-4 text-lg text-light-purple">
+                    <p className="mt-4 text-lg text-white">
                       Stop being surprised when a great title is finally released or ends up being ported to a specific
                       platform. Stay on top with their current release dates, community rating, which one is its game studio
                       or even for what platforms one game will be released. You can get all of this here!
@@ -306,17 +306,17 @@ export default function LandingPage() {
                     <div className="mt-6">
                       <a
                         href="#"
-                        className="inline-flex bg-white bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-purple hover:bg-gray-200"
+                        className="inline-flex bg-purple bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:bg-opacity-80"
                       >
                         Get started
                       </a>
                     </div>
                   </div>
                 </div>
-                <div className="mt-8 border-t border-aqua pt-6">
+                <div className="mt-8 border-t border-purple pt-6">
                   <blockquote>
                     <div>
-                      <p className="text-base font-medium text-light-purple">
+                      <p className="text-base font-medium text-white">
                         God of War (2018), Santa Monica Studio <p>Winner of the Game of The Year award in 2018</p>
                       </p>
                     </div>
@@ -329,7 +329,7 @@ export default function LandingPage() {
                             alt=""
                           />
                         </div>
-                        <div className="text-base text-purple">
+                        <div className="text-base text-white">
                           &ldquo;It is a new beginning for Kratos. Living as a man, outside the shadow of the gods, he
                           seeks solitude in the unfamiliar lands of Norse mythology. With new purpose and his son at his
                           side, Kratos must fight for survival as powerful forces threaten to disrupt the new life he
@@ -344,7 +344,7 @@ export default function LandingPage() {
                 <div className="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
                   <img
                     className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-                    src={Catalogue}
+                    src={GameData}
                     alt="Games Catalogue"
                   />
                 </div>
@@ -357,14 +357,14 @@ export default function LandingPage() {
                 <div>
                   <div>
                     <span className="h-12 w-12 rounded-md flex items-center justify-center bg-gradient-to-r from-purple-600 to-indigo-600">
-                      <SparklesIcon className="h-6 w-6 text-purple" aria-hidden="true" />
+                      <SparklesIcon className="h-6 w-6 text-light-purple" aria-hidden="true" />
                     </span>
                   </div>
                   <div className="mt-6">
-                    <h2 className="text-3xl font-extrabold tracking-tight text-purple">
+                    <h2 className="text-3xl font-extrabold tracking-tight text-white">
                       Better understand your customers
                     </h2>
-                    <p className="mt-4 text-lg text-light-purple">
+                    <p className="mt-4 text-lg text-white">
                       Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia
                       porttitor. Pulvinar laoreet sagittis viverra duis. In venenatis sem arcu pretium pharetra at.
                       Lectus viverra dui tellus ornare pharetra.
@@ -372,7 +372,7 @@ export default function LandingPage() {
                     <div className="mt-6">
                       <a
                         href="#"
-                        className="inline-flex bg-white bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-purple hover:bg-gray-200"
+                        className="inline-flex bg-purple bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:bg-opacity-80"
                       >
                         Get started
                       </a>
@@ -384,7 +384,7 @@ export default function LandingPage() {
                 <div className="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
                   <img
                     className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
-                    src={GameData}
+                    src={Catalogue}
                     alt="Games API Data"
                   />
                 </div>
@@ -396,8 +396,8 @@ export default function LandingPage() {
         {/* Gradient Feature Section */}
         <div className="bg-gradient-to-r from-purple-800 to-indigo-700">
           <div className="max-w-4xl mx-auto px-4 py-16 sm:px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:pt-24 lg:px-8">
-            <h2 className="text-3xl font-extrabold text-purple tracking-tight">Inbox support built for efficiency</h2>
-            <p className="mt-4 max-w-3xl text-lg text-light-purple">
+            <h2 className="text-3xl font-extrabold text-white tracking-tight">Inbox support built for efficiency</h2>
+            <p className="mt-4 max-w-3xl text-lg text-white">
               Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis. Blandit
               aliquam sit nisl euismod mattis in.
             </p>
@@ -405,13 +405,13 @@ export default function LandingPage() {
               {features.map((feature) => (
                 <div key={feature.name}>
                   <div>
-                    <span className="flex items-center justify-center h-12 w-12 rounded-md bg-light-purple bg-opacity-20">
-                      <feature.icon className="h-6 w-6 text-light-purple" aria-hidden="true" />
+                    <span className="flex items-center justify-center h-12 w-12 rounded-md bg-light-purple">
+                      <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
                     </span>
                   </div>
                   <div className="mt-6">
-                    <h3 className="text-lg font-medium text-purple">{feature.name}</h3>
-                    <p className="mt-2 text-base text-light-purple">{feature.description}</p>
+                    <h3 className="text-lg font-medium text-white">{feature.name}</h3>
+                    <p className="mt-2 text-base text-white">{feature.description}</p>
                   </div>
                 </div>
               ))}
@@ -466,10 +466,12 @@ export default function LandingPage() {
         </div>
 
         {/* CTA Section */}
-        <div className="bg-white">
+        <div className="bg-dark">
           <div className="max-w-4xl mx-auto py-16 px-4 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8 lg:flex lg:items-center lg:justify-between">
-            <h2 className="text-4xl font-extrabold tracking-tight text-purple sm:text-4xl">
-              <span className="block">Ready to get started?</span>
+            <h2 className="text-4xl font-extrabold tracking-tight sm:text-4xl">
+              <span className="bg-gradient-to-r from-aqua to-light-purple bg-clip-text text-transparent">
+                Ready to get started?!
+              </span>
               <span className="block bg-gradient-to-r from-aqua to-light-purple bg-clip-text text-transparent">
                 Get in touch or create an account.
               </span>
@@ -477,13 +479,13 @@ export default function LandingPage() {
             <div className="mt-6 space-y-4 sm:space-y-0 sm:flex sm:space-x-5">
               <a
                 href="#"
-                className="flex items-center justify-center bg-white px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-purple hover:bg-gray-200"
+                className="flex items-center justify-center bg-purple px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:bg-opacity-80"
               >
                 Learn more
               </a>
               <a
                 href="#"
-                className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-purple bg-white hover:bg-gray-200"
+                className="flex items-center justify-center bg-purple px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white  hover:bg-opacity-80"
               >
                 Get started
               </a>

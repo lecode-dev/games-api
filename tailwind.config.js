@@ -9,6 +9,7 @@ module.exports = {
         'light-purple': '#664E88',
         'aqua': '#63B4B8',
         'light-aqua': '#A9E4D7',
+        'dark': '#121214',
       },
       fontFamily: {
         'poppins': ['poppins', 'sans-serif'],
