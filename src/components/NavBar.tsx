@@ -61,7 +61,7 @@ export default function NavBar() {
                   </h1>
                 </div>
               </div>
-              <div className="relative z-0 flex-1 px-2 flex items-center justify-center sm:absolute sm:inset-0">
+              <div className="relative z-0 flex-1 flex items-center justify-end sm:absolute sm:inset-0">
                 <div className="w-full sm:max-w-xs">
                   <label htmlFor="search" className="sr-only">
                     Search
