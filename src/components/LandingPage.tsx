@@ -257,9 +257,9 @@ export default function LandingPage() {
         </div>
 
         {/* Logo Cloud */}
-        <div className="bg-light-aqua bg-gradient-to-r from-light-aqua to-purple">
+        <div className="bg-gradient-to-r from-light-aqua to-purple">
           <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-            <p className="text-center text-sm font-semibold uppercase text-purple tracking-wide">
+            <p className="text-center mb-16 text-sm font-semibold uppercase text-purple tracking-wide">
               Get to know every game from your favorite game studio developer!
             </p>
             <div className="mt-6 grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
@@ -267,7 +267,7 @@ export default function LandingPage() {
                 <img className="h-14" src={SantaMonica} alt="Santa Monica Studio Icon" />
               </div>
               <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                <img className="h-16" src={Ubisoft} alt="Ubisoft Icon" />
+                <img className="h-14" src={Ubisoft} alt="Ubisoft Icon" />
               </div>
               <div className="col-span-1 flex justify-center pt-2 md:col-span-2 lg:col-span-1">
                 <img className="h-12" src={BandaiNamco} alt="Bandai Namco Icon" />
@@ -276,14 +276,14 @@ export default function LandingPage() {
                 <img className="h-14" src={NaughtyDog} alt="Naughty Dog Inc. Icon"/>
               </div>
               <div className="col-span-2 flex justify-center pt-1 md:col-span-3 lg:col-span-1">
-                <img className="h-16" src={Insomniac} alt="Insomniac Icon" />
+                <img className="h-14" src={Insomniac} alt="Insomniac Icon" />
               </div>
             </div>
           </div>
         </div>
 
         {/* Alternating Feature Sections */}
-        <div className="relative pt-16 pb-32 overflow-hidden">
+        <div className="relative pt-16 overflow-hidden">
           <div aria-hidden="true" className="absolute inset-x-0 top-0 h-48 bg-gradient-to-b bg-dark" />
           <div className="relative">
             <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
@@ -362,12 +362,12 @@ export default function LandingPage() {
                   </div>
                   <div className="mt-6">
                     <h2 className="text-3xl font-extrabold tracking-tight text-white">
-                      Better understand your customers
+                      Not only AAA titles needs atention
                     </h2>
                     <p className="mt-4 text-lg text-white">
-                      Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia
-                      porttitor. Pulvinar laoreet sagittis viverra duis. In venenatis sem arcu pretium pharetra at.
-                      Lectus viverra dui tellus ornare pharetra.
+                      Be in tune with small team developed titles. Being part of an adventure, a great story; remember
+                      that a story is not written by graphics, but so by character, facts and plot development. A game
+                      is always a game, and not only great titles are capable of entertain and amuse a player.
                     </p>
                     <div className="mt-6">
                       <a
@@ -396,7 +396,9 @@ export default function LandingPage() {
         {/* Gradient Feature Section */}
         <div className="bg-gradient-to-r from-purple-800 to-indigo-700">
           <div className="max-w-4xl mx-auto px-4 py-16 sm:px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:pt-24 lg:px-8">
-            <h2 className="text-3xl font-extrabold text-white tracking-tight">Inbox support built for efficiency</h2>
+            <h2 className="text-3xl font-extrabold text-white tracking-tight">
+              Inbox support built for efficiency
+            </h2>
             <p className="mt-4 max-w-3xl text-lg text-white">
               Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis. Blandit
               aliquam sit nisl euismod mattis in.
@@ -443,7 +445,7 @@ export default function LandingPage() {
                   Valuable Metrics
                 </span>
               </h2>
-              <p className="mt-3 text-3xl font-extrabold bg-gradient-to-r text-white">
+              <p className="text-3xl font-extrabold bg-gradient-to-r text-white">
                 Get actionable data that will help grow your business
               </p>
               <p className="mt-5 text-lg text-white">
@@ -467,7 +469,7 @@ export default function LandingPage() {
 
         {/* CTA Section */}
         <div className="bg-dark">
-          <div className="max-w-4xl mx-auto py-16 px-4 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8 lg:flex lg:items-center lg:justify-between">
+          <div className="max-w-4xl mx-auto py-10 px-8 sm:px-10 sm:py-16 lg:max-w-7xl lg:px-8 lg:flex lg:items-center lg:justify-between">
             <h2 className="text-4xl font-extrabold tracking-tight sm:text-4xl">
               <span className="bg-gradient-to-r from-aqua to-light-purple bg-clip-text text-transparent">
                 Ready to get started?!
