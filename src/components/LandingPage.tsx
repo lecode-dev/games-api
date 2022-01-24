@@ -1,38 +1,19 @@
-/*
-  This example requires Tailwind CSS v2.0+ 
-  
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
-*/
-import { Fragment } from 'react'
-import { Popover, Transition } from '@headlessui/react'
 import {
   AnnotationIcon,
   ChatAlt2Icon,
-  ChatAltIcon,
-  DocumentReportIcon,
-  HeartIcon,
   InboxIcon,
-  MenuIcon,
-  PencilAltIcon,
   QuestionMarkCircleIcon,
-  ReplyIcon,
-  SparklesIcon,
-  TrashIcon,
-  UsersIcon,
-  XIcon,
+
 } from '@heroicons/react/outline'
-import { ChevronDownIcon } from '@heroicons/react/solid'
+
+import {
+  GiRetroController,
+  GiMouse,
+  GiBroadsword,
+  GiBrickWall,
+  GiStarsStack
+
+} from "react-icons/gi";
 
 import DittoImg from "../assets/ditto.png"
 import HomeImage from "../assets/playstation-titles.png"
@@ -45,74 +26,33 @@ import Ubisoft from "../assets/ubisoft-logo.png"
 import BandaiNamco from "../assets/bandai-namco-logo.png"
 import NaughtyDog from "../assets/naughty-dog-logo.png"
 
-const solutions = [
-  {
-    name: 'Inbox',
-    description: 'Get a better understanding of where your traffic is coming from.',
-    href: '#',
-    icon: InboxIcon,
-  },
-  {
-    name: 'Messaging',
-    description: 'Speak directly to your customers in a more meaningful way.',
-    href: '#',
-    icon: AnnotationIcon,
-  },
-  { name: 'Live Chat', description: "Your customers' data will be safe and secure.", href: '#', icon: ChatAlt2Icon },
-  {
-    name: 'Knowledge Base',
-    description: "Connect with third-party tools that you're already using.",
-    href: '#',
-    icon: QuestionMarkCircleIcon,
-  },
-]
 const features = [
   {
-    name: 'Unlimited Inboxes',
-    description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
-    icon: InboxIcon,
+    name: 'All Platforms',
+    description: 'Stay on top of the platforms each game was released on. Play whichever you prefer.',
+    icon: GiRetroController,
   },
   {
-    name: 'Manage Team Members',
-    description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
-    icon: UsersIcon,
+    name: 'All Game Genres',
+    description: 'Heard of a game genre you didn\'t know about? Stay on top of all game genres!',
+    icon: GiBroadsword,
   },
   {
-    name: 'Spam Report',
-    description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
-    icon: TrashIcon,
+    name: 'Miss The Classics?',
+    description: 'Don\'t know your favorite classic as well as you\`d like? Studio, release date, platforms, all in one place.',
+    icon: GiBrickWall,
   },
   {
-    name: 'Compose in Markdown',
-    description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
-    icon: PencilAltIcon,
-  },
-  {
-    name: 'Team Reporting',
-    description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
-    icon: DocumentReportIcon,
-  },
-  {
-    name: 'Saved Replies',
-    description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
-    icon: ReplyIcon,
-  },
-  {
-    name: 'Email Commenting',
-    description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
-    icon: ChatAltIcon,
-  },
-  {
-    name: 'Connect with Customers',
-    description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
-    icon: HeartIcon,
-  },
+    name: 'Game Ratings',
+    description: 'Do you like to know the game notes? Get lists of the best and worst titles based on Metacritic ratings.',
+    icon: GiStarsStack,
+  }
 ]
 const metrics = [
-  { id: 1, stat: '8K+', emphasis: 'Companies', rest: 'use laoreet amet lacus nibh integer quis.' },
-  { id: 2, stat: '25K+', emphasis: 'Countries around the globe', rest: 'lacus nibh integer quis.' },
-  { id: 3, stat: '98%', emphasis: 'Customer satisfaction', rest: 'laoreet amet lacus nibh integer quis.' },
-  { id: 4, stat: '12M+', emphasis: 'Issues resolved', rest: 'lacus nibh integer quis.' },
+  { id: 1, stat: '2M+', emphasis: 'Game Screenshots', rest: 'for you to see the brilliance of the game environment and characters.' },
+  { id: 2, stat: '1M+', emphasis: 'Ratings', rest: 'by the community and review specialists given by Metacritic.' },
+  { id: 3, stat: '45K+', emphasis: 'Publishers', rest: 'like Sony, CD Projekt Red, Bethesda and much more!' },
+  { id: 4, stat: '58K+', emphasis: 'Tags', rest: 'including game genres, platforms and etc.' },
 ]
 const footerNavigation = {
   solutions: [
@@ -291,7 +231,7 @@ export default function LandingPage() {
                 <div>
                   <div>
                     <span className="h-12 w-12 rounded-md flex items-center justify-center bg-gradient-to-r from-purple-600 to-indigo-600">
-                      <InboxIcon className="h-6 w-6 text-light-purple" aria-hidden="true" />
+                      <GiRetroController className="h-9 w-9 text-light-purple" aria-hidden="true" />
                     </span>
                   </div>
                   <div className="mt-6">
@@ -357,7 +297,7 @@ export default function LandingPage() {
                 <div>
                   <div>
                     <span className="h-12 w-12 rounded-md flex items-center justify-center bg-gradient-to-r from-purple-600 to-indigo-600">
-                      <SparklesIcon className="h-6 w-6 text-light-purple" aria-hidden="true" />
+                      <GiMouse className="h-10 w-10 text-light-purple" aria-hidden="true" />
                     </span>
                   </div>
                   <div className="mt-6">
@@ -397,11 +337,10 @@ export default function LandingPage() {
         <div className="bg-gradient-to-r from-purple-800 to-indigo-700">
           <div className="max-w-4xl mx-auto px-4 py-16 sm:px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:pt-24 lg:px-8">
             <h2 className="text-3xl font-extrabold text-white tracking-tight">
-              Inbox support built for efficiency
+              Your most complete game data library
             </h2>
             <p className="mt-4 max-w-3xl text-lg text-white">
-              Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis. Blandit
-              aliquam sit nisl euismod mattis in.
+              Be able to search specific data and informations about your favorite game title.
             </p>
             <div className="mt-12 grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4 lg:gap-x-8 lg:gap-y-16">
               {features.map((feature) => (
@@ -489,7 +428,7 @@ export default function LandingPage() {
                 href="#"
                 className="flex items-center justify-center bg-purple px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white  hover:bg-opacity-80"
               >
-                Get started
+                Go searching
               </a>
             </div>
           </div>
