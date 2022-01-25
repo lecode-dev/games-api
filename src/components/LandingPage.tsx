@@ -19,6 +19,8 @@ import DittoImg from "../assets/ditto.png"
 import HomeImage from "../assets/playstation-titles.png"
 import Catalogue from "../assets/game-titles.png"
 import GameData from "../assets/game-data.png"
+import RandomGames from "../assets/random-games.jpg"
+import CiriLooking from "../assets/ciri-looking.png"
 import GodOfWar from "../assets/god-of-war-cover.jpg"
 import SantaMonica from "../assets/santa-monica-logo.png"
 import Insomniac from "../assets/insomniac-logo.png"
@@ -366,9 +368,9 @@ export default function LandingPage() {
             <div className="h-full w-full xl:grid xl:grid-cols-2">
               <div className="h-full xl:relative xl:col-start-2">
                 <img
-                  className="h-full w-full object-cover opacity-25 xl:absolute xl:inset-0"
-                  src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2830&q=80&sat=-100"
-                  alt="People working on laptops"
+                  className="h-full w-full object-cover opacity-30 xl:absolute xl:inset-0"
+                  src={CiriLooking}
+                  alt="Other Game Titles"
                 />
                 <div
                   aria-hidden="true"
@@ -385,12 +387,12 @@ export default function LandingPage() {
                 </span>
               </h2>
               <p className="text-3xl font-extrabold bg-gradient-to-r text-white">
-                Get actionable data that will help grow your business
+                Get full data from the epic and magnificent world of games
               </p>
               <p className="mt-5 text-lg text-white">
-                Rhoncus sagittis risus arcu erat lectus bibendum. Ut in adipiscing quis in viverra tristique sem. Ornare
-                feugiat viverra eleifend fusce orci in quis amet. Sit in et vitae tortor, massa. Dapibus laoreet amet
-                lacus nibh integer quis. Eu vulputate diam sit tellus quis at.
+                Here you are able to see screenshots, Metacritic ratings, searching by tags, Steam average playtime
+                and more. You dont't need to be stuck in basic game data, you can get also links to digital distribution
+                to know where to buy games and the official websites and even system requirements and YouTube videos.
               </p>
               <div className="mt-12 grid grid-cols-1 gap-y-12 gap-x-6 sm:grid-cols-2">
                 {metrics.map((item) => (
@@ -411,11 +413,13 @@ export default function LandingPage() {
           <div className="max-w-4xl mx-auto py-10 px-8 sm:px-10 sm:py-16 lg:max-w-7xl lg:px-8 lg:flex lg:items-center lg:justify-between">
             <h2 className="text-4xl font-extrabold tracking-tight sm:text-4xl">
               <span className="bg-gradient-to-r from-aqua to-light-purple bg-clip-text text-transparent">
-                Ready to get started?!
+                Ready to get into this?!
               </span>
-              <span className="block bg-gradient-to-r from-aqua to-light-purple bg-clip-text text-transparent">
-                Get in touch or create an account.
-              </span>
+              <p>
+                <span className="bg-gradient-to-r from-aqua to-light-purple bg-clip-text text-transparent">
+                  Go search your favorite titles.
+                </span>
+              </p>
             </h2>
             <div className="mt-6 space-y-4 sm:space-y-0 sm:flex sm:space-x-5">
               <a
