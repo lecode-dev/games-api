@@ -1,12 +1,4 @@
 import {
-  AnnotationIcon,
-  ChatAlt2Icon,
-  InboxIcon,
-  QuestionMarkCircleIcon,
-
-} from '@heroicons/react/outline'
-
-import {
   GiRetroController,
   GiMouse,
   GiBroadsword,
