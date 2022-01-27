@@ -61,14 +61,14 @@ export default function NavBar() {
                       Search
                     </label>
                     <div className="relative">
-                      <div className="pointer-events-none absolute inset-y-0 left-0 pl-3 flex items-center">
+                      <div className="pointer-events-none absolute inset-y-0 left-0 pl-2.5 flex items-center">
                         <SearchIcon className="h-5 w-5 text-light-purple" aria-hidden="true" />
                       </div>
                       <input
                         id="search"
                         name="search"
-                        className="block w-full bg-white border border-transparent rounded-md py-2 pl-10 pr-3 text-sm placeholder-purple focus:outline-none focus:bg-white focus:border-white focus:ring-white focus:text-light-purple focus:placeholder-gray-500 sm:text-sm"
-                        placeholder="Search"
+                        className="block w-full bg-white border border-transparent rounded-md py-2 pl-9 text-sm placeholder-purple focus:outline-none focus:bg-white focus:border-white focus:ring-white focus:text-light-purple focus:placeholder-gray-500 sm:text-sm"
+                        placeholder="Search a game"
                         type="search"
                       />
                     </div>
@@ -123,7 +123,7 @@ export default function NavBar() {
                       id="search"
                       name="search"
                       className="block w-full bg-white border border-transparent rounded-md py-2 pl-10 pr-3 text-sm placeholder-purple focus:outline-none focus:bg-white focus:border-white focus:ring-white focus:text-light-purple focus:placeholder-gray-500 sm:text-sm"
-                      placeholder="Search"
+                      placeholder="Search a game"
                       type="search"
                     />
                   </div>
