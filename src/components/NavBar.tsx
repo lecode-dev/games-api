@@ -55,7 +55,24 @@ export default function NavBar() {
                     The Game Database
                   </h1>
                 </div>
-                <div className="hidden relative z-0 flex-1 sm:flex items-center justify-end sm:absolute sm:inset-0">
+                <div className="hidden sm:block sm:ml-6">
+                  <div className="flex space-x-4">
+                    {navigation.map((item) => (
+                      <a
+                        key={item.name}
+                        href={item.href}
+                        className={classNames(
+                          item.current ? 'bg-light-purple text-white' : 'text-gray-300 hover:bg-light-purple hover:text-white',
+                          'px-4 py-2 rounded-md text-sm font-medium'
+                        )}
+                        aria-current={item.current ? 'page' : undefined}
+                      >
+                        {item.name}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+                <div className="hidden relative z-0 flex-1 sm:flex items-center justify-end sm:inset-0">
                   <div className="w-full sm:w-36 md:w-64 lg:w-80">
                     <label htmlFor="search" className="sr-only">
                       Search
@@ -72,23 +89,6 @@ export default function NavBar() {
                         type="search"
                       />
                     </div>
-                  </div>
-                </div>
-                <div className="hidden sm:block sm:ml-6">
-                  <div className="flex space-x-4">
-                    {navigation.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        className={classNames(
-                          item.current ? 'bg-light-purple text-white' : 'text-gray-300 hover:bg-light-purple hover:text-white',
-                          'px-4 py-2 rounded-md text-sm font-medium'
-                        )}
-                        aria-current={item.current ? 'page' : undefined}
-                      >
-                        {item.name}
-                      </a>
-                    ))}
                   </div>
                 </div>
               </div>
