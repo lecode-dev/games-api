@@ -55,8 +55,8 @@ export default function NavBar() {
                     The Game Database
                   </h1>
                 </div>
-                <div className="relative z-0 flex-1 flex items-center justify-end sm:absolute sm:inset-0 sm:hidden">
-                  <div className="w-full sm:max-w-xs">
+                <div className="hidden relative z-0 flex-1 sm:flex items-center justify-end sm:absolute sm:inset-0">
+                  <div className="w-full sm:w-36 md:w-64 lg:w-80">
                     <label htmlFor="search" className="sr-only">
                       Search
                     </label>
@@ -110,6 +110,25 @@ export default function NavBar() {
                   {item.name}
                 </Disclosure.Button>
               ))}
+              <div className="relative z-0 flex-1 flex items-center justify-center sm:inset-0">
+                <div className="w-full">
+                  <label htmlFor="search" className="sr-only">
+                    Search
+                  </label>
+                  <div className="relative">
+                    <div className="pointer-events-none absolute inset-y-0 left-0 pl-3 flex items-center">
+                      <SearchIcon className="h-5 w-5 text-light-purple" aria-hidden="true" />
+                    </div>
+                    <input
+                      id="search"
+                      name="search"
+                      className="block w-full bg-white border border-transparent rounded-md py-2 pl-10 pr-3 text-sm placeholder-purple focus:outline-none focus:bg-white focus:border-white focus:ring-white focus:text-light-purple focus:placeholder-gray-500 sm:text-sm"
+                      placeholder="Search"
+                      type="search"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           </Disclosure.Panel>
         </>
