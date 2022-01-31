@@ -2,6 +2,7 @@
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
+import { SearchIcon } from '@heroicons/react/solid'
 
 import DittoImg from "../assets/ditto.png"
 
@@ -9,7 +10,6 @@ import DittoImg from "../assets/ditto.png"
 const navigation = [
   { name: 'Home', href: '#', current: true },
   { name: 'About Us', href: '#', current: false },
-  { name: 'Search', href: '#', current: false },
 ]
 
 function classNames(...classes:any) {
@@ -72,6 +72,25 @@ export default function NavBar() {
                     ))}
                   </div>
                 </div>
+                <div className="hidden relative pl-3 z-0 flex-1 sm:flex items-center justify-end sm:inset-0">
+                  <div className="w-full md:w-64 lg:w-80">
+                    <label htmlFor="search" className="sr-only">
+                      Search
+                    </label>
+                    <div className="relative">
+                      <div className="pointer-events-none absolute inset-y-0 left-0 pl-2.5 flex items-center">
+                        <SearchIcon className="h-5 w-5 text-light-purple" aria-hidden="true" />
+                      </div>
+                      <input
+                        id="search"
+                        name="search"
+                        className="block w-full bg-white border border-transparent rounded-md py-2 pl-9 text-sm placeholder-purple focus:outline-none focus:bg-white focus:border-white focus:ring-white focus:text-light-purple focus:placeholder-gray-500 sm:text-sm"
+                        placeholder="Search a game"
+                        type="search"
+                      />
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -91,6 +110,25 @@ export default function NavBar() {
                   {item.name}
                 </Disclosure.Button>
               ))}
+              <div className="relative z-0 flex-1 flex items-center justify-center sm:inset-0">
+                <div className="w-full">
+                  <label htmlFor="search" className="sr-only">
+                    Search
+                  </label>
+                  <div className="relative">
+                    <div className="pointer-events-none absolute inset-y-0 left-0 pl-3 flex items-center">
+                      <SearchIcon className="h-5 w-5 text-light-purple" aria-hidden="true" />
+                    </div>
+                    <input
+                      id="search"
+                      name="search"
+                      className="block w-full bg-white border border-transparent rounded-md py-2 pl-10 pr-3 text-sm placeholder-purple focus:outline-none focus:bg-white focus:border-white focus:ring-white focus:text-light-purple focus:placeholder-gray-500 sm:text-sm"
+                      placeholder="Search a game"
+                      type="search"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           </Disclosure.Panel>
         </>
