@@ -72,8 +72,8 @@ export default function NavBar() {
                     ))}
                   </div>
                 </div>
-                <div className="hidden relative z-0 flex-1 sm:flex items-center justify-end sm:inset-0">
-                  <div className="w-full sm:w-36 md:w-64 lg:w-80">
+                <div className="hidden relative pl-3 z-0 flex-1 sm:flex items-center justify-end sm:inset-0">
+                  <div className="w-full md:w-64 lg:w-80">
                     <label htmlFor="search" className="sr-only">
                       Search
                     </label>
